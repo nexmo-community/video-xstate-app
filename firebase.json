@@ -1,9 +1,9 @@
 {
   "functions": {
     "predeploy": [
-      "npm --prefix \"$PROJECT_DIR\" install",
       "npm --prefix \"$RESOURCE_DIR\" run lint",
-      "npm --prefix \"$PROJECT_DIR\" run build"
+      "npm --prefix \"$PROJECT_DIR/frontend\" install",
+      "npm --prefix \"$PROJECT_DIR/frontend\" run build"
     ]
   },
   "hosting": {
