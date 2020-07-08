@@ -66,4 +66,4 @@ node_modules/
 
 video-xstate-creds.json
 
-.firebaserc
+/.firebaserc
