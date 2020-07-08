@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { ThemeProvider, CSSReset, theme } from '@chakra-ui/core';
+import FirebaseProvider from './context/firebase';
+import App from './components/App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <FirebaseProvider>
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <App />
+    </ThemeProvider>
+  </FirebaseProvider>,
   document.getElementById('root')
 );
