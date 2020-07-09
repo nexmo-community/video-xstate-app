@@ -92,6 +92,10 @@ In the Firebase console, click `⚙️ -> Project Settings` and ensure the `Defa
 
 Next click on `Database` in the left menu, and the `Create Database`. Start this in `Production` mode.
 
+#### Update to Pay-As-You-Go
+
+A recent change to Firebase now requires the project to be `pay-as-you-go`. Click `⚙️ -> Usage and Billing -> Details & Settings -> Modify Plan`.  Select the `Blaze` option and connect to the GCP billing account.
+
 ### Start Firebase Emulator
 
 In a terminal window, navigate to the `functions` folder, install requirements and then start the Firebase Emulator:
