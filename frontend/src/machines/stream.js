@@ -30,10 +30,10 @@ export const stream = Machine(
             actions: 'assignStream',
           },
           TOGGLE_AUDIO_PUBLISH: {
-            actions: ['toggleAudioPublish', 'toggleAudioPublish'],
+            actions: ['toggleAudioPublish', 'sendToggleAudioEvent'],
           },
           TOGGLE_VIDEO_PUBLISH: {
-            actions: ['toggleVideoPublish', 'toggleVideoPublish'],
+            actions: ['toggleVideoPublish', 'sendToggleVideoEvent'],
           },
           TOGGLE_AUDIO: { actions: 'toggleAudio' },
           TOGGLE_VIDEO: { actions: 'toggleVideo' },
