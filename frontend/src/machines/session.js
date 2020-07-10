@@ -91,7 +91,7 @@ export const session = Machine(
           ),
       }),
       assignToken: assign({ token: (_, e) => e.data.data.token }),
-      assignSessionId: assign({ sessionId: (ctx, e) => e.sessionId }),
+      assignSessionId: assign({ sessionId: (_, e) => e.sessionId }),
       initSession: assign({
         session: (ctx) =>
           OT.initSession(process.env.REACT_APP_OPENTOK_APIKEY, ctx.sessionId),
@@ -114,8 +114,8 @@ export const session = Machine(
         ctx.subscribers.get(e.id).send('TOGGLE_VIDEO', { value: e.value }),
     },
     guards: {
-      checkReady: (ctx, e) => ctx.token && ctx.publisher,
-      checkSessionId: (ctx, e) => e.sessionId,
+      checkReady: (ctx) => ctx.token && ctx.publisher,
+      checkSessionId: (_, e) => e.sessionId,
     },
     services: {
       invokeCreateToken: (ctx) => createToken(ctx.sessionId),

@@ -43,7 +43,7 @@ export const stream = Machine(
   },
   {
     actions: {
-      updateAudioLevel: assign({ audioLevel: (ctx, e) => e.audioLevel }),
+      updateAudioLevel: assign({ audioLevel: (_, e) => e.audioLevel }),
       assignStream: assign({
         stream: (_, e) => e.stream,
         videoSrcObject: (_, e) => e.stream.videoElement().srcObject,
@@ -58,8 +58,8 @@ export const stream = Machine(
       })),
       toggleAudioPublish: (ctx) => ctx.stream.publishAudio(!ctx.hasAudio),
       toggleVideoPublish: (ctx) => ctx.stream.publishVideo(!ctx.hasVideo),
-      toggleAudio: assign({ hasAudio: (ctx, e) => e.value }),
-      toggleVideo: assign({ hasVideo: (ctx, e) => e.value }),
+      toggleAudio: assign({ hasAudio: (_, e) => e.value }),
+      toggleVideo: assign({ hasVideo: (_, e) => e.value }),
     },
     services: {
       monitorStreamEvents: streamEvents,
