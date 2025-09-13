@@ -11,7 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@xstate/react": "^0.8.1",
     "emotion-theming": "^10.0.27",
-    "firebase": "^7.15.4",
+    "firebase": "^10.0.0",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-async-hook": "^3.6.1",
