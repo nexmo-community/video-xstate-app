@@ -7,7 +7,7 @@
     "@emotion/styled": "^10.0.27",
     "@opentok/client": "^2.17.3",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/react": "^10.0.0",
     "@testing-library/user-event": "^7.1.2",
     "@xstate/react": "^0.8.1",
     "emotion-theming": "^10.0.27",
